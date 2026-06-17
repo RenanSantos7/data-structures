@@ -1,0 +1,52 @@
+{
+	"name": "typescript",
+	"author": "Renan Santos",
+	"license": "MIT",
+	"version": "1.0.0",
+	"description": "Node, Typescript, Jest, ESLint Template Project",
+	"main": "src/index.js",
+	"repository": {
+		"url": ""
+	},
+	"scripts": {
+		"dev": "tsx ./src/main.ts",
+		"start": "node ./build/main.js",
+		"ts:check": "tsc --noEmit",
+		"build": "rm -rf ./build && tsc && tsc-alias",
+		"lint": "eslint . --cache",
+		"lint:fix": "eslint . --fix --cache",
+		"format": "prettier . --write",
+		"format:check": "prettier . --check"
+	},
+	"dependencies": {
+		"change-case": "^5.4.4",
+		"dotenv": "^16"
+	},
+	"devDependencies": {
+		"@types/node": "^22",
+		"prettier": "^3",
+		"ts-node": "^10",
+		"ts-node-dev": "^2",
+		"tsc-alias": "^1",
+		"tsconfig-paths": "^4",
+		"tsx": "^4.21.0",
+		"typescript": "^6.0.3",
+		"typescript-transform-paths": "^3"
+	},
+	"prettier": {
+		"arrowParens": "avoid",
+		"singleQuote": true,
+		"printWidth": 80,
+		"endOfLine": "lf",
+		"useTabs": true,
+		"tabWidth": 4,
+		"semi": true
+	},
+	"prettierignore": [
+		"build",
+		"coverage",
+		"node_modules",
+		".eslintcache",
+		".env"
+	]
+}

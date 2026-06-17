@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"rootDir": "./src",
+		"outDir": "./build",
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitOverride": true,
+		"skipLibCheck": true,
+
+		"types": ["node"]
+	},
+	"include": ["./src/**/*.ts", "src/types/**/*.d.ts"],
+	"exclude": ["./build", "./coverage", "./node_modules", "./test"]
+}
