@@ -9,8 +9,8 @@
 		"url": "https://github.com/RenanSantos7/data-structures"
 	},
 	"scripts": {
-		"dev": "tsx ./src/main.ts",
-		"start": "node ./build/main.js",
+		"dev": "tsx ./src/index.ts",
+		"start": "node ./build/index.js",
 		"ts:check": "tsc --noEmit",
 		"build": "rm -rf ./build && tsc && tsc-alias",
 		"lint": "eslint . --cache",

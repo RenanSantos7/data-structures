@@ -1,68 +1,50 @@
-# Template TypeScript Acadêmico
+# Data Structures Library
 
-Este repositório é um template simples para projetos acadêmicos em TypeScript com Node.js. A ideia é oferecer uma base enxuta, com tipagem estrita, organização clara de arquivos e comandos prontos para desenvolvimento, build e lint.
+A collection of standard, highly-optimized data structures implemented in TypeScript, packaged for Node.js and the browser.
 
-## O que inclui
+## Installation
 
-- TypeScript com `strict` ativado
-- Execução em ambiente Node.js moderno
-- Suporte a variáveis de ambiente com `dotenv`
-- Alias de importação `@/` apontando para `src/`
-- Verificação e formatação com ESLint e Prettier
-- Saída de build em `build/`
-
-## Estrutura
-
-```text
-.
-├── src/
-│   ├── main.ts
-│   └── lib/
-│       └── stdio.ts
-├── types/
-│   └── env.d.ts
-├── package.json
-└── tsconfig.json
-```
-
-## Requisitos
-
-- Node.js 20 ou superior
-- npm, pnpm ou yarn
-
-## Instalação
+To use this library in your project, install it via your package manager of choice:
 
 ```bash
-npm install
+# Using npm
+npm install @renansantos7/data-structures
+
+# Using pnpm
+pnpm add @renansantos7/data-structures
+
+# Using yarn
+yarn add @renansantos7/data-structures
 ```
 
-## Scripts
+## How to Import
 
-- `npm run dev`: executa o projeto diretamente com `tsx`
-- `npm run build`: limpa a pasta `build/`, compila o TypeScript e ajusta os aliases
-- `npm run start`: executa a versão compilada em `build/main.js`
-- `npm run lint`: verifica o código com ESLint
-- `npm run lint:fix`: corrige problemas automaticamente com ESLint
-- `npm run format`: formata os arquivos com Prettier
-- `npm run format:check`: confere se a formatação está correta
+All data structures are exported as named exports from the package root:
 
-## Como usar
+```typescript
+import {
+	Tree,
+	BinaryTree,
+	BinarySearchTree,
+	ChainedList,
+	OrderedList,
+	Queue,
+	Stack,
+} from '@renansantos7/data-structures';
+```
 
-O ponto de entrada atual é `src/main.ts`. Ele já carrega `dotenv/config` e serve como exemplo inicial para testar o ambiente e a leitura de variáveis de ambiente.
+## Available Data Structures
 
-Para criar seu trabalho acadêmico, substitua o conteúdo de `main.ts` pela lógica do projeto e organize novas funções, classes ou módulos dentro de `src/`. Se precisar de importações mais limpas, use o alias `@/` para apontar para arquivos internos.
+Detailed documentation for each structure can be found in the `docs` directory:
 
-## Variáveis de ambiente
+- **[Tree](docs/Tree.md)**: A hierarchical, non-linear general tree structure.
+- **[Binary Tree](docs/BinaryTree.md)**: A tree structure where each node has at most two children.
+- **[Binary Search Tree](docs/BinarySearchTree.md)**: A sorted binary tree variant that optimizes search, insertion, and deletion.
+- **[Stack](docs/Stack.md)**: A LIFO (Last In, First Out) stack implementation.
+- **[Queue](docs/Queue.md)**: A FIFO (First In, First Out) queue implementation backed by a ChainedList.
+- **[Chained List](docs/ChainedList.md)**: A singly linked list implementation.
+- **[Ordered List](docs/OrderedList.md)**: A list that maintains elements in sorting order dynamically.
 
-O template já inclui o tipo `NODE_ENV` em `types/env.d.ts`. Caso seu trabalho use outras variáveis, adicione novos campos nessa interface para manter a tipagem alinhada.
-
-## Convenções
-
-- Mantenha a tipagem explícita sempre que fizer sentido
-- Prefira módulos pequenos e reutilizáveis
-- Deixe lógica de apresentação, domínio e infraestrutura separadas quando o trabalho crescer
-- Rode `lint` e `format` antes de entregar o projeto
-
-## Licença
+## License
 
 MIT
